@@ -323,6 +323,8 @@ class ReceiptPrinter
             // Cut the receipt
             $this->printer->cut();
             $this->printer->close();
+        } else {
+            throw new Exception('Printer has not been initialized.');
         }
     }
 
